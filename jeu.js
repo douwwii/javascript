@@ -253,8 +253,8 @@ async function tour(joueurs){ // simule un seul tour
           console.log(`A ${joueur.nom} de jouer, ton jeu est ${joueur.cartes}`);
           let choix 
           do {
-            choix = await rl.question(`Veux-tu piocher (y ou n) ? `);
-          } while (!(["y","n"].includes(choix)));
+            choix = await rl.question(`Veux-tu piocher ou quitter (p ou q) ? `);
+          } while (!(["p","q"].includes(choix)));
           if (choix === "n"){
             joueur.tour = false; // le joueur s'est couché
           }
